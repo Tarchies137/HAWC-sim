@@ -1,0 +1,16 @@
+# This is an example macro which works well with the single tank setup in
+# the hawcsim-config directory.
+# Can be run in the HAWCSim terminal with command like:
+# /control/execute runvrml
+
+# Create a .wrl file suitable for viewing in a VRML viewer
+/vis/open VRML2FILE
+
+# Define visualisation properties
+/control/execute initvis.mac
+
+# For file-based drivers, use this to create an empty detector view:
+/vis/viewer/flush
+
+# Shoot a particle from the list
+/run/beamOn 1

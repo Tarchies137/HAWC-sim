@@ -1,0 +1,57 @@
+# This is an example macro which works well with the single tank setup in
+# the hawcsim-config directory.
+# Can be run in the HAWCSim terminal with command like:
+# /control/execute runopengl
+
+# Open OpenGL window
+/vis/open OGLSX 1200x1000
+
+# Reset the viewer
+/vis/viewer/set/autoRefresh true
+
+# Draw the detector
+/vis/drawVolume
+
+# Set background color
+/vis/viewer/set/background white
+
+# Set style to draw surface or wireframe
+/vis/viewer/set/style surface
+/vis/viewer/set/globalLineWidthScale 1
+
+# Setup our viewing window
+/vis/viewer/set/targetPoint 0 0 50 cm
+/vis/viewer/set/viewpointThetaPhi 100 170 deg #Normal to Caz plane
+/vis/viewer/set/upVector 0 0 1 
+/vis/viewer/zoomTo 1
+/vis/viewer/pan 5.8 2.5
+
+#Tank height for scale
+#/vis/scene/add/scale 5 m z 1 0 0 manual 0 500 250 cm
+
+# Add some particle filters so we don't see too many tracks
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set e- yellow
+/vis/modeling/trajectories/drawByParticleID-0/set e+ yellow
+/vis/modeling/trajectories/drawByParticleID-0/set mu- green
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ green
+/vis/modeling/trajectories/drawByParticleID-0/set gamma blue
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton red
+
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add e-
+/vis/filtering/trajectories/particleFilter-0/add e+
+/vis/filtering/trajectories/particleFilter-0/add mu-
+/vis/filtering/trajectories/particleFilter-0/add mu+
+/vis/filtering/trajectories/particleFilter-0/add gamma
+/vis/filtering/trajectories/particleFilter-0/add opticalphoton
+
+# Turn on some energy slices to limit output
+/vis/filtering/trajectories/create/attributeFilter
+/vis/filtering/trajectories/attributeFilter-0/setAttribute IMag
+/vis/filtering/trajectories/attributeFilter-0/addInterval 0.5 GeV 10000 GeV
+/vis/filtering/trajectories/attributeFilter-0/addInterval 3.109 eV  3.110 eV
+
+# Shoot a particle from the list
+/run/beamOn 1

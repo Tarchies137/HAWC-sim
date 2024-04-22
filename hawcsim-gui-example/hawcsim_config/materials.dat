@@ -1,0 +1,556 @@
+##########################################################################
+## materials.dat,v 2.0 2013-12-09
+##
+## It holds optical parameters for the materials.
+##########################################################################
+
+################
+MATERIAL "StainlessSteel"
+PROPERTY  REFLECTIVITY
+# UNITS  nm\E 1
+OPTION wavelength
+275 0.6         # a crude guess
+650 0.6         # a crude guess
+
+
+PROPERTY  ABSLENGTH   # UTTER FICTION! (necessary for avoiding warning)
+# UNITS  nm\E mm
+OPTION wavelength
+275 0.01
+650 0.01
+
+
+
+##########################
+MATERIAL "Vacuum"
+PROPERTY RINDEX
+OPTION wavelength
+275 1.00
+300 1.00
+500 1.00
+650 1.00
+
+
+
+##########################
+MATERIAL "airc"
+PROPERTY RINDEX
+OPTION wavelength
+275 1.0003236
+300 1.0002915
+500 1.0002792
+650 1.0002763
+
+
+PROPERTY ABSLENGTH
+OPTION wavelength
+#units nm\E mm
+650 30420
+250 30420
+
+
+
+##########################
+MATERIAL "Polypropylene"
+PROPERTY REFLECTIVITY
+OPTION wavelength
+650 0.10
+275 0.10
+
+
+
+##########################
+MATERIAL "PVC"
+PROPERTY REFLECTIVITY
+OPTION wavelength
+650 0.05 #fiction
+250 0.05 #fiction
+
+
+
+##########################
+MATERIAL "Tyvek"
+PROPERTY REFLECTIVITY
+#UNITS nm\E 1
+OPTION wavelength
+650 0.92
+600 0.92
+550 0.92
+500 0.92
+450 0.92
+400 0.90
+350 0.82
+300 0.70
+250 0.63
+
+
+PROPERTY SPECULARLOBECONSTANT
+#//From Auger Note GAP-2000-055
+OPTION wavelength
+650 0.2
+250 0.2
+
+
+
+##########################
+MATERIAL "Liner"
+PROPERTY REFLECTIVITY
+#Baffle material
+#Property taken from David Schmidt's memo (1994)
+#Figure 4, with assuming max reflectivity=90%.
+#UNITS nm\E 1
+OPTION wavelength
+650 0.88
+600 0.86
+550 0.85
+500 0.88
+450 0.88
+400 0.41
+350 0.11
+300 0.11
+250 0.11
+
+
+
+##########################
+MATERIAL "Water"
+PROPERTY ABSLENGTH
+OPTION wavelength
+#units nm\E mm
+690 1723.346376
+685 1837.67053733
+681 1960.77636972
+675 2052.38787939
+670 2115.17723288
+665 2169.92857515
+661 2256.02471679
+655 2440.20754551
+650 2572.55701836
+646 2663.34346505
+640 2699.09536007
+635 2711.58018176
+629 2776.24066169
+625 2813.49241221
+619 2932.84008033
+615 3064.11455074
+610 3261.35401975
+605 3542.09608102
+600 4124.19738407
+596 5109.42794009
+590 6142.47343566
+585 7419.80568678
+579 8656.06705003
+575 9915.75938058
+570 10999.3128964
+565 11947.8126076
+560 12925.2985109
+555 13816.461684
+550 14906.0435133
+545 15896.3449567
+540 17034.214619
+535 18766.9762828
+530 19970.9227004
+525 21197.5553858
+520 21940.0648375
+515 23359.1873386
+510 26690.6502501
+505 31013.3005477
+500 35834.1799397
+495 41817.9443384
+490 44191.1132346
+485 44911.1410844
+480 44807.1913015
+475 44908.71817
+470 42692.9941532
+465 41052.8184643
+460 40120.8791209
+455 38665.4280273
+450 36844.5093613
+445 33910.2167183
+440 30994.8244406
+435 28273.4868555
+429 26149.844501
+425 24060.6989045
+420 22105.5315081
+415 20530.9655938
+410 19108.601336
+405 18000.0
+400 16765.9214502
+395 15750.1702868
+390 14666.5257149
+385 13846.1077844
+380 12982.1431356
+375 12230.9760649
+370 11571.3034654
+365 10899.9345293
+360 10288.1931999
+355 9711.91898451
+350 9168.61803483
+345 8616.82107551
+340 8133.15095261
+335 7696.97642164
+330 7334.81363997
+325 6987.55980861
+320 6642.94948528
+315 6271.58893995
+310 5785.57130942
+305 5277.21567136
+300 4789.29865946
+295 4439.85279215
+290 4002.25010818
+285 3494.07320349
+280 3201.76929882
+275 2893.08726931
+270 2608.34743373
+265 2357.2848526
+260 2154.48404379
+255 1965.12747875
+250 1779.37668334
+245 1637.99291617
+240 1514.93775934
+235 1453.48954968
+230 1384.42655668
+225 1286.51706231
+220 1146.46870868
+215 711.781103035
+210 361.720766523
+205 202.448562673
+200 120.331319206
+
+
+PROPERTY RINDEX
+OPTION wavelength
+#units nm\E 1
+#Optical photons are generated only for
+#the wavelengths that a RINDEX is specified.
+#So we want to specify a RINDEX only where PMT QE>0
+275 1.37761
+300 1.35942
+350 1.34978
+400 1.34378
+450 1.3397
+500 1.33676
+550 1.33458
+600 1.33293
+650 1.33165
+
+
+PROPERTY MIEHG
+OPTION wavelength
+#units nm\E mm
+650 11000
+600 11000
+550 11000
+500 11000
+427 11000
+405 11000
+385 11000
+376 11000
+350 11000
+300 11000
+250 11000
+
+
+CONST_PROPERTY MIEHG_FORWARD       0.99
+CONST_PROPERTY MIEHG_BACKWARD      0
+CONST_PROPERTY MIEHG_FORWARD_RATIO 1
+
+
+
+##########################
+MATERIAL  "Glass"
+PROPERTY  RINDEX
+# Calculated from Cauchy formula for
+# typical parameters of borosilicate glass
+# n = 1.472 + 3760/l^2 (l in nm)
+# see also NIM A 539 p225
+# VV
+# UNITS  nm\E 1
+OPTION wavelength
+275 1.53216
+300 1.513777778
+350 1.502693878
+400 1.4955
+450 1.490567901
+500 1.48704
+550 1.484429752
+600 1.482444444
+650 1.480899408
+
+
+PROPERTY  ABSLENGTH
+# UNITS  nm\E mm
+# Calculated from transmittance of borosilicate Glass
+# (Hamamtsu PMT Handbook Figure 3-3 )
+# assuming glass width=3mm. VV
+#
+OPTION wavelength
+275       0.188       #extrapolation
+299.69525 0.832238546
+301.12616 1.108868073
+306.24628 1.822596084
+316.8143  2.724705049
+340.74838 4.479283738
+364.73572 5.989758165
+396.15414 7.945329114
+427.16    9.310446926
+463.96933 9.340137205
+482.37274 9.354228583
+650       9.354       #extrapolation
+
+
+
+##########################
+MATERIAL  "R5912Photocathode"
+PROPERTY  EFFICIENCY
+# From Hamamatsu PMT R5912 spec sheet, digitized by CPL ans GS
+# Note this is lower than values used in Geant3
+# UNITS  nm\E 1
+OPTION wavelength
+650 0.001
+625 0.005
+600 0.014
+575 0.030
+550 0.052
+525 0.081
+500 0.119
+475 0.156
+450 0.200
+425 0.219
+400 0.232
+375 0.227
+350 0.216
+325 0.188
+300 0.086
+275 0.000
+
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1
+OPTION wavelength
+275 2.9                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+650 2.9                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  KINDEX        # "k" in M.D.Lay paper for thin PMT layer
+# UNITS  nm\E 1
+OPTION wavelength
+200 1.6                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 1.6                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  THICKNESS     # Thickness of photocathode as function of Z position
+# UNITS  mm mm
+75  26e-6               # Z=75.0_mm is 8" PMT top
+0   26e-6               # Z=0 is equator; no data for thickness, assumed same
+
+
+
+##########################
+MATERIAL  "R7081Photocathode"
+PROPERTY  EFFICIENCY
+# Digitized from R5912 HQE plot
+# UNITS  nm\E 1
+OPTION wavelength
+680.0 0.000
+678.5 0.002
+659.7 0.004
+638.2 0.009
+629.3 0.012
+619.7 0.018
+606.7 0.028
+588.2 0.042
+579.8 0.051
+573.6 0.055
+566.7 0.062
+562.1 0.069
+554.8 0.079
+547.9 0.088
+542.1 0.100
+532.9 0.118
+526.7 0.131
+522.5 0.142
+517.5 0.150
+514.4 0.158
+509.4 0.166
+504.1 0.173
+499.1 0.183
+494.8 0.192
+490.6 0.203
+486.4 0.210
+481.4 0.216
+477.9 0.221
+475.2 0.226
+469.5 0.239
+463.7 0.251
+460.2 0.256
+457.2 0.260
+453.3 0.267
+448.7 0.273
+444.5 0.277
+437.2 0.285
+429.1 0.294
+424.1 0.301
+421.4 0.305
+414.5 0.310
+406.4 0.316
+401.1 0.319
+394.1 0.325
+385.3 0.328
+375.3 0.330
+366.9 0.331
+356.5 0.325
+349.2 0.319
+340.4 0.301
+336.6 0.290
+331.6 0.274
+327.7 0.251
+319.3 0.200
+312.8 0.151
+306.7 0.100
+300.2 0.051
+297.1 0.034
+288.7 0.006
+279.5 0.002
+275   0.000
+
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1
+OPTION wavelength
+275 2.9                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+650 2.9                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  KINDEX        # "k" in M.D.Lay paper for thin PMT layer
+# UNITS  nm\E 1
+OPTION wavelength
+200 1.6                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 1.6                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  THICKNESS     # Thickness of photocathode as function of Z position
+# UNITS  mm mm
+95  26e-6               # Z=75.0_mm is 8" PMT top
+0   26e-6               # Z=0 is equator; no data for thickness, assumed same
+
+
+##########################
+MATERIAL  "R5912HQEPhotocathode"
+PROPERTY  EFFICIENCY
+# From Hamamatsu PMT R7081 spec sheet, digitized by CPL ans GS
+# Note this is lower than values used in Geant3
+# Modified to be the HQE version
+# UNITS  nm\E 1
+OPTION wavelength
+680.0 0.000
+678.5 0.002
+659.7 0.004
+638.2 0.009
+629.3 0.012
+619.7 0.018
+606.7 0.028
+588.2 0.042
+579.8 0.051
+573.6 0.055
+566.7 0.062
+562.1 0.069
+554.8 0.079
+547.9 0.088
+542.1 0.100
+532.9 0.118
+526.7 0.131
+522.5 0.142
+517.5 0.150
+514.4 0.158
+509.4 0.166
+504.1 0.173
+499.1 0.183
+494.8 0.192
+490.6 0.203
+486.4 0.210
+481.4 0.216
+477.9 0.221
+475.2 0.226
+469.5 0.239
+463.7 0.251
+460.2 0.256
+457.2 0.260
+453.3 0.267
+448.7 0.273
+444.5 0.277
+437.2 0.285
+429.1 0.294
+424.1 0.301
+421.4 0.305
+414.5 0.310
+406.4 0.316
+401.1 0.319
+394.1 0.325
+385.3 0.328
+375.3 0.330
+366.9 0.331
+356.5 0.325
+349.2 0.319
+340.4 0.301
+336.6 0.290
+331.6 0.274
+327.7 0.251
+319.3 0.200
+312.8 0.151
+306.7 0.100
+300.2 0.051
+297.1 0.034
+288.7 0.006
+279.5 0.002
+275   0.000
+
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1
+OPTION wavelength
+275 2.9                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+650 2.9                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  KINDEX        # "k" in M.D.Lay paper for thin PMT layer
+# UNITS  nm\E 1
+OPTION wavelength
+200 1.6                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 1.6                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  THICKNESS     # Thickness of photocathode as function of Z position
+# UNITS  mm mm
+75  26e-6               # Z=75.0_mm is 8" PMT top
+0   26e-6               # Z=0 is equator; no data for thickness, assumed same
+
+
+
+##########################
+MATERIAL  "R9999Photocathode"
+PROPERTY  EFFICIENCY
+# UNITS  nm\E 1
+OPTION wavelength
+680.0 1.0
+275.0 1.0
+
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1
+OPTION wavelength
+275 2.9                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+650 2.9                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  KINDEX        # "k" in M.D.Lay paper for thin PMT layer
+# UNITS  nm\E 1
+OPTION wavelength
+200 1.6                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 1.6                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  THICKNESS     # Thickness of photocathode as function of Z position
+# UNITS  mm mm
+95  26e-6               # Z=75.0_mm is 8" PMT top
+0   26e-6               # Z=0 is equator; no data for thickness, assumed same

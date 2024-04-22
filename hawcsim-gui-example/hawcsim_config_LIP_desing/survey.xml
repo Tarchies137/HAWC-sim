@@ -1,0 +1,255 @@
+<?xml version="1.0" ?>
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="/homes/bbaugh/opt/aerie/svn_23792/share/hawc/config/DetectorLayout.xsd">
+  <name> hawc-realish </name>
+  <version> 1.0 </version>
+  <!-- Detector reference point -->
+  <position>
+    <northing unit="meter"> 2100866.3 </northing>
+    <easting unit="meter"> 678106.3 </easting>
+    <altitude unit="meter"> 4096.000000 </altitude>
+    <ellipsoid> WGS84 </ellipsoid>
+    <zone> 14 </zone>
+    <band> Q </band>
+  </position>
+
+    <arrayCenter>
+      <x unit="cm"> 0.0 </x>
+      <y unit="cm"> 0.0 </y>
+      <z unit="cm"> 0.000000 </z>
+    </arrayCenter>
+    <layout>
+    
+    <!-- Outrigger Tank -->
+    
+    <tank id="1">
+      <name> OR_1 </name>
+      <type> 2 </type>
+      <position>
+        <x unit="cm"> 0 </x>
+        <y unit="cm"> 270.0 </y>
+        <z unit="cm"> 0 </z>
+      </position>
+      <channels>
+        <channel id="1">
+          <name> OR1 </name>
+          <number> 1 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 40 </z>
+          </position>
+        </channel>
+      </channels>
+    </tank>
+
+    <!-- Double Layer -->
+    <tank id="2">
+      <name> SGSO_1 </name>
+      <type> 3 </type>
+      <position>
+        <x unit="cm"> 0 </x>
+        <y unit="cm"> 0 </y>
+        <z unit="cm"> 0 </z>
+      </position>
+      <channels>
+        <channel id="1">
+          <name> DLA </name>
+          <number> 1 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        <channel id="2">
+          <name> DLB </name>
+          <number> 2 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+    </channels>
+    </tank>
+    
+    
+    
+    <!-- Main Array Tank -->
+    <tank id="3">
+      <name> Main_1 </name>
+      <type> 1 </type>
+      <position>
+        <x unit="cm"> 0 </x>
+        <y unit="cm"> -950.0 </y>
+        <z unit="cm"> 0 </z>
+      </position>
+      <channels>
+        <channel id="1">
+          <name> C </name>
+          <number> 1 </number>
+          <type> 2 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 40 </z>
+          </position>
+        </channel>
+        <channel id="2">
+          <name> A </name>
+          <number> 2 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> -46.64 </x>
+            <y unit="cm"> -179.04 </y>
+            <z unit="cm"> 40 </z>
+          </position>
+        </channel>
+        <channel id="3">
+          <name> B </name>
+          <number> 3 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> -132.37 </x>
+            <y unit="cm"> 129.26 </y>
+            <z unit="cm"> 40 </z>
+          </position>
+        </channel>
+        <channel id="4">
+          <name> D </name>
+          <number> 4 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 178.40 </x>
+            <y unit="cm"> 49.71 </y>
+            <z unit="cm"> 40 </z>
+          </position>
+        </channel>
+      </channels>
+    </tank>
+
+    <!-- Double Layer -->
+    <tank id="4">
+      <name> Cylindrical_1 </name>
+      <type> 4 </type>
+      <position>
+        <x unit="cm"> 0 </x>
+        <y unit="cm"> -375 </y>
+        <z unit="cm"> 0 </z>
+      </position>
+            
+      <channels>
+        
+        <channel id="1">
+          <name> UpperCentral </name>
+          <number> 1 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 6 </z>
+          </position>
+        </channel>
+        
+        <channel id="2">
+          <name> LowerDownWards </name>
+          <number> 2 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 7 </z>
+          </position>
+          <rotation>
+            <rotX > 0 </rotX>
+            <rotY > 3.1415 </rotY>
+            <rotZ > 0 </rotZ>
+          </rotation>
+        </channel>
+
+        <channel id="3">
+          <name> Periphial1 </name>
+          <number> 3 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> 150 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        
+        <channel id="5">
+          <name> Periphial2 </name>
+          <number> 5 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 150 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        
+        <channel id="7">
+          <name> Periphial3 </name>
+          <number> 7 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> -150 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        
+        <channel id="9">
+          <name> Periphial4 </name>
+          <number> 9 </number>
+          <type> 3 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> -150 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        
+      </channels>
+    </tank>
+
+        <!-- hexagonal Double Layer -->
+    <tank id="5">
+      <name> DLWCDHex_1 </name>
+      <type> 6 </type>
+      <position>
+        <x unit="cm"> 0 </x>
+        <y unit="cm"> -1400.0 </y>
+        <z unit="cm"> 0 </z>
+      </position>
+      <channels>
+        <channel id="1">
+          <name> DLHA </name>
+          <number> 1 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+        <channel id="2">
+          <name> DLHB </name>
+          <number> 2 </number>
+          <type> 1 </type>
+          <position>
+            <x unit="cm"> 0 </x>
+            <y unit="cm"> 0 </y>
+            <z unit="cm"> 0 </z>
+          </position>
+        </channel>
+    </channels>
+    </tank>
+	
+    </layout>
+</detector>
